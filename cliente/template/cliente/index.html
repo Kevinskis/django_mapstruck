@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,z<a initial-scale=1">
+    <title>MapsTruck</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <!--Barra de navegación inicial-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3" id="Menu">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-danger-emphasis fs-5 fw-bold">MapsTruck</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./codigo/Nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./codigo/Servicios.html">Servicios</a>
+                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="./codigo/Formulariocontacto.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Registrate aquí
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./codigo/RegistroProveedores.html">Registro Proveedor</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="./codigo/RegistroCliente.html">Registro Cliente</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="./codigo/Formulariocontacto.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Contáctanos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./codigo/Formulariocontacto.html">Formulario de Contacto</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Descarga Nuestra App</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Botón para Iniciar Modal -->
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Log In Usuario
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Log In</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <label><b>Email</b></label><br>
+                                <input type="email" name="Email" id="Email" placeholder="ejemplo@email.com" required><br><br>
+                                <label><b>Contraseña</b></label><br>
+                                <input type="password" name="Password" id="Password" placeholder="Contraseña" required><br><br>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-outline-danger" onclick="validateLogin()">Iniciar Sesión</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+
+        
+<!--Carrusel inicial-->
+<section>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="./img/grua.png" class="d-block" style="width: 100%; height: auto;" alt="grua1">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="./img/grua4.png" class="d-block" style="width: 100%; height: auto;" alt="grua2">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="./img/gruas1.png" class="d-block" style="width: 100%; height: auto;" alt="grua3">
+            </div>
+        </div>
+    </div>
+</section> 
+
+    
+        <!--Inicio de las secciones-->
+        <section class="w-50 mx-auto text-center pt-3" id="intro">
+            <div>
+                <h1 class="p-3 fs-2 border-top-3">Una Empresa única para todas tus <span class="text-danger-emphasis"> Necesidades en Ruta</span></h1>
+            </div>
+            <div>
+                <p><span class="text-danger-emphasis">En MapsTruck</span> Estamos aquí para ayudarte en tu camino. Ya sea que necesites una grúa para tu vehículo, una mano amiga en la carretera o simplemente información sobre tu ruta, estamos a tu disposición.</p>
+            </div>
+                <br><br>
+            <div>
+                <p>Confía en nosotros para hacer que tu viaje sea más seguro y sin preocupaciones. ¡Estamos listos para ayudarte a llegar a donde necesitas ir!</p>
+            </div>
+        </section>
+
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#79242f" fill-opacity="1" d="M0,288L48,266.7C96,245,192,203,288,170.7C384,139,480,117,576,138.7C672,160,768,224,864,213.3C960,203,1056,117,1152,85.3C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+    
+    <footer class ="w-100 d-flex align-items justify-content-center flex-wrap">
+    <div id="iconos">
+        <a href="#"><i class="bi bi-whatsapp"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+    </div>
+    </footer>
+<script>
+
+    function validateLogin() {
+        var email = document.getElementById("Email").value;
+        var password = document.getElementById("Password").value;
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        var passwordPattern = /^.{8,}$/;
+        // Validación de email y contraseña
+        if (!emailPattern.test(email)) {
+            alert("Por favor, ingrese una dirección de correo electrónico válida.");
+            return;
+        }
+        if (!passwordPattern.test(password)) {
+            alert("La contraseña debe tener al menos 8 caracteres.");
+            return;
+        }
+        window.location.href = "./codigo/HomeCliente.html";
+    }
+</script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

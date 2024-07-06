@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro Cliente</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../contactanos.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+            <!--Barra de navegación inicial-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3" id="Menu">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-danger-emphasis fs-5 fw-bold">MapsTruck</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./codigo/Nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./codigo/Servicios.html">Servicios</a>
+                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="./codigo/Formulariocontacto.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Registrate aquí
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./codigo/RegistroProveedores.html">Registro Proveedor</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="./codigo/RegistroCliente.html">Registro Cliente</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="./codigo/Formulariocontacto.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Contáctanos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./codigo/Formulariocontacto.html">Formulario de Contacto</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Descarga Nuestra App</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Botón para Iniciar Modal -->
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Log In Usuario
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Log In</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <label><b>Email</b></label><br>
+                                <input type="email" name="Email" id="Email" placeholder="ejemplo@email.com" required><br><br>
+                                <label><b>Contraseña</b></label><br>
+                                <input type="password" name="Password" id="Password" placeholder="Contraseña" required><br><br>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-outline-danger" onclick="validateLogin()">Iniciar Sesión</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <main>
+        <h1>Registro Clientes</h1>
+        <div class="contact">
+            <form id="contact" method="post" action="contact.php" onsubmit="return validateForm()">
+                <label><b>Nombre</b></label><br>
+                <input type="text" name="name" id="clientname" placeholder="Ingrese su nombre" required><br><br>
+                <label><b>Apellidos</b></label><br>
+                <input type="text" name="apellidos" id="clientlastname" placeholder="Ingrese sus apellidos" required><br><br>
+                <label><b>Dirección</b></label><br>
+                <input type="text" name="clientAddress" id="clientAddress" placeholder="Ingrese su dirección" required><br><br>
+                <label><b>Teléfono de contacto</b></label><br>
+                <input type="text" name="contactPhone" id="contactPhone" placeholder="Teléfono de contacto" required><br><br>
+                <label><b>Email de contacto</b></label><br>
+                <input type="email" name="contactEmail" id="contactEmail" placeholder="ejemplo@email.com" required><br><br>
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#vehicleModal">Registrar Vehículo</button>
+                <br><br>
+                
+                
+                <input type="submit" name="submit" id="submit" value="Registrarse" disabled>
+            </form>
+        </div>
+    </main>
+
+    <!-- Modal para registro de vehículos -->
+    <div class="modal fade" id="vehicleModal" tabindex="-1" aria-labelledby="vehicleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="vehicleModalLabel">Registrar Vehículo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="vehicle-form">
+                        <form id="vehicleForm">
+                            <div class="form-group">
+                                <label for="brand">Marca</label>
+                                <input type="text" class="form-control" id="brand" name="brand" placeholder="Ingrese la marca del vehículo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="model">Modelo</label>
+                                <input type="text" class="form-control" id="model" name="model" placeholder="Ingrese el modelo del vehículo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="year">Año</label>
+                                <input type="number" class="form-control" id="year" name="year" placeholder="Ingrese el año del vehículo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="plateNumber">Número de Placa</label>
+                                <input type="text" class="form-control" id="plateNumber" name="plateNumber" placeholder="Ingrese el número de placa" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="color">Color</label>
+                                <input type="text" class="form-control" id="color" name="color" placeholder="Ingrese el color del vehículo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="vin">Número de Identificación del Vehículo (VIN)</label>
+                                <input type="text" class="form-control" id="vin" name="vin" placeholder="Ingrese el VIN del vehículo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ownerName">Nombre del Propietario</label>
+                                <input type="text" class="form-control" id="ownerName" name="ownerName" placeholder="Ingrese el nombre del propietario" required>
+                            </div>
+                            <button type="submit" id="submitVehicle" disabled>Registrar Vehículo</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact');
+            const submitButton = document.getElementById('submit');
+            const vehicleForm = document.getElementById('vehicleForm');
+            const submitVehicleButton = document.getElementById('submitVehicle');
+            
+            const requiredFields = [
+                'clientname',
+                'clientlastname',
+                'clientAddress',
+                'contactPhone',
+                'contactEmail'
+            ];
+
+            const requiredVehicleFields = [
+                'brand',
+                'model',
+                'year',
+                'plateNumber',
+                'color',
+                'vin',
+                'ownerName'
+            ];
+
+            contactForm.addEventListener('input', function() {
+                let allFilled = true;
+
+                for (const fieldId of requiredFields) {
+                    const field = document.getElementById(fieldId);
+                    if (!field.value.trim()) {
+                        allFilled = false;
+                        break;
+                    }
+                }
+
+                submitButton.disabled = !allFilled;
+            });
+
+            vehicleForm.addEventListener('input', function() {
+                let allVehicleFilled = true;
+
+                for (const fieldId of requiredVehicleFields) {
+                    const field = document.getElementById(fieldId);
+                    if (!field.value.trim()) {
+                        allVehicleFilled = false;
+                        break;
+                    }
+                }
+
+                submitVehicleButton.disabled = !allVehicleFilled;
+            });
+
+            vehicleForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Evita que el formulario se envíe automáticamente
+                if (validateVehicleForm()) {
+                    submitVehicleButton.disabled = true; // Deshabilita el botón para evitar múltiples envíos
+                    alert('Vehículo registrado exitosamente!');
+                    vehicleForm.reset(); // Limpia el formulario
+                    submitVehicleButton.disabled = true; // Asegura que el botón permanezca deshabilitado hasta que se llenen nuevamente todos los campos
+                }
+            });
+        });
+
+        function validateForm() {
+            var email = document.getElementById("contactEmail").value;
+            var phone = document.getElementById("contactPhone").value;
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var phonePattern = /^[0-9]{7,15}$/; // Solo dígitos y longitud entre 7 y 15
+
+            if (!emailPattern.test(email)) {
+                alert("Por favor, ingrese una dirección de correo electrónico válida.");
+                return false;
+            }
+
+            if (!phonePattern.test(phone)) {
+                alert("Por favor, ingrese un número de teléfono válido (solo dígitos y entre 7 y 15 caracteres).");
+                return false;
+            }
+
+            return true;
+        }
+
+        function validateVehicleForm() {
+            const requiredVehicleFields = [
+                'brand',
+                'model',
+                'year',
+                'plateNumber',
+                'color',
+                'vin',
+                'ownerName'
+            ];
+
+            for (const fieldId of requiredVehicleFields) {
+                const field = document.getElementById(fieldId);
+                if (!field.value.trim()) {
+                    alert("Por favor, complete todos los campos obligatorios del formulario de vehículo.");
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    </script>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

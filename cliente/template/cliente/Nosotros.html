@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nosotros-MapsTruck</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../index.css" rel="stylesheet">
+  </head>
+
+<!--encabezado-->
+<header>
+    <!--Barra de navegación inicial-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3" id="Menu">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <span class="text-danger-emphasis fs-5 fw-bold">MapsTruck</span>
+                </a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="./Servicios.html">Servicios</a>
+                    </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Registrate aquí
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./RegistroProveedores.html">Registro Proveedor</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="./RegistroCliente.html">Registro Cliente</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Contáctanos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./Formulariocontacto.html">Formulario de Contacto</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Descarga Nuestra App</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+    
+                    <!-- Botón para Iniciar Modal -->
+                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Log In Usuario
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Log In</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <label><b>Email</b></label><br>
+                                    <input type="email" name="Email" id="Email" placeholder="ejemplo@email.com" required><br><br>
+                                    <label><b>Contraseña</b></label><br>
+                                    <input type="password" name="Password" id="Password" placeholder="Contraseña" required><br><br>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-outline-danger" onclick="validateLogin()">Iniciar Sesión</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>    
+</header>
+
+<body>
+    
+    <h1>Nosotros</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, inventore enim cum, laudantium ipsam doloribus aut iusto et possimus nemo illo suscipit aliquid optio veritatis accusamus ipsum! Ad, nisi sequi!</p>
+
+<br>
+<br>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, amet provident, corrupti non voluptate ratione error iure beatae dolore officia vel asperiores tenetur voluptatum consequatur, blanditiis nihil est veritatis ipsam!</p>
+
+  </body>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</html>

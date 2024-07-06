@@ -1,0 +1,57 @@
+@import url('fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: whitesmoke;
+}
+
+header{
+    background-color: #79242f;
+}
+
+#Menu li > a {
+    font-size: 16px;
+    font-weight: bold;
+    color:#79242f
+}
+
+#Menu form > ::placeholder{
+    font-size: 14px;
+}
+
+#Menu form > button{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+header > p{
+    color:white
+}
+
+nav{
+    background-color: whitesmoke;
+    color:#79242f;
+}
+
+.carousel-inner{
+    max-height: 35 rem;
+}
+
+
+p{
+    color: #333;
+}
+
+@media (max-width:768px){
+    #intro{
+        width: 90% !important;
+    }
+}
+
+#iconos {
+    font-size: 26px;
+    padding: 0 8px;
+    color:#333
+
+}

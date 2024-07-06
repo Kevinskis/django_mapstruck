@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de Grúas para Motocicletas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #2c3e50;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #1abc9c;
+            color: white;
+        }
+        .container {
+            padding: 20px;
+        }
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+        }
+        .carousel .caption {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #1abc9c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #16a085;
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#login">Login</a>
+        <a href="#registro-proveedores">Registro Proveedores</a>
+        <a href="#registro-usuarios">Registro Usuarios</a>
+        <a href="#listado-proveedores">Proveedores Cercanos</a>
+        <a href="#solicitud-servicio">Solicitud de Servicio</a>
+        <a href="#servicio-en-camino">Servicio en Camino</a>
+    </div>
+
+    <div class="container" id="login">
+        <h2>Login</h2>
+        <div class="carousel">
+            <img src="https://via.placeholder.com/800x400" alt="Grua 1">
+            <div class="caption">Bienvenido al Servicio de Grúas</div>
+        </div>
+        <form>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <div class="container" id="registro-proveedores">
+        <h2>Registro de Proveedores</h2>
+        <form>
+            <input type="text" placeholder="Nombre de la Empresa" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="text" placeholder="Teléfono" required>
+            <input type="text" placeholder="Dirección" required>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+
+    <div class="container" id="registro-usuarios">
+        <h2>Registro de Usuarios</h2>
+        <form>
+            <input type="text" placeholder="Nombre Completo" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+
+    <div class="container" id="listado-proveedores">
+        <h2>Proveedores Cercanos</h2>
+        <div id="proveedores-list">
+            <!-- Aquí se cargarán los proveedores cercanos -->
+        </div>
+    </div>
+
+    <div class="container" id="solicitud-servicio">
+        <h2>Solicitud de Servicio</h2>
+        <form>
+            <input type="text" placeholder="Ubicación Actual" required>
+            <input type="text" placeholder="Destino" required>
+            <button type="submit">Solicitar Servicio</button>
+        </form>
+    </div>
+
+    <div class="container" id="servicio-en-camino">
+        <h2>Servicio en Camino</h2>
+        <p>Su servicio está en camino. Puede seguir el estado de su solicitud aquí.</p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Servicio de Grúas para Motocicletas | 
+            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+            <a href="https://www.twitter.com" target="_blank">X</a>
+        </p>
+    </div>
+
+    <script>
+        // Aquí iría el código para consumir la API de geolocalización y cargar los proveedores cercanos
+    </script>
+</body>
+</html>

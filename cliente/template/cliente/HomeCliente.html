@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Servicio</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Home.css">
+
+</head>
+<body>
+    <header>
+        <h5>Solicitar Servicio para mi Ubicación actual</h5>
+    </header>
+    
+    <main>
+        <div id="map"></div>
+    </main>
+
+    <!-- Script para inicializar el mapa y obtener la geolocalización del usuario -->
+    <script>
+        function initMap() {
+            // Verifica si el navegador soporta la geolocalización
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const userLocation = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                        };
+
+                        // Inicializa el mapa centrado en la ubicación del usuario
+                        const map = new google.maps.Map(document.getElementById("map"), {
+                            zoom: 14,
+                            center: userLocation,
+                        });
+
+                        // Añade un marcador en la ubicación del usuario
+                        new google.maps.Marker({
+                            position: userLocation,
+                            map: map,
+                            title: "Tu ubicación",
+                        });
+                    },
+                    () => {
+                        handleLocationError(true, map.getCenter());
+                    }
+                );
+            } else {
+                // Navegador no soporta geolocalización
+                handleLocationError(false, map.getCenter());
+            }
+        }
+
+        function handleLocationError(browserHasGeolocation, pos) {
+            alert(
+                browserHasGeolocation
+                    ? "Error: El servicio de geolocalización falló."
+                    : "Error: Tu navegador no soporta la geolocalización."
+            );
+        }
+    </script>
+
+    <!-- Script de Google Maps API -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8Dhaz6w7uLkKqHQWfFbYQHlTqfTCoOzY&callback=initMap&v=weekly"
+        defer
+    ></script>
+    
+    <!-- Script de Bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

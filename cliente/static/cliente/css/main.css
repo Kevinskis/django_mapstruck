@@ -1,0 +1,69 @@
+header{
+    background-color: #79242f;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; 
+    background-color: azure; 
+}
+
+h1{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color:#79242f
+}
+
+h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: navy;}
+p {
+    color: #333;
+    text-align: justify;
+    margin: auto;
+    width: 60%;
+}
+
+.card {
+    font-family: Arial, sans-serif;
+    text-align:center;
+    margin: auto;
+    width: 80%;
+}
+
+.pcard{
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    margin: auto;
+    width:100%;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#Menu li > a {
+    font-size: 16px;
+    font-weight: bold;
+    color:#79242f
+}
+
+#Menu form > ::placeholder{
+    font-size: 14px;
+}
+
+#Menu form > button{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+header > p{
+    color:white
+}
+
+nav{
+    background-color: whitesmoke;
+    color:#79242f;
+}
