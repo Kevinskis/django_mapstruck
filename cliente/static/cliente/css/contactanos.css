@@ -1,0 +1,132 @@
+#Menu li > a {
+    font-size: 16px;
+    font-weight: bold;
+    color:#79242f
+}
+
+#Menu form > ::placeholder{
+    font-size: 14px;
+}
+
+#Menu form > button{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav{
+    background-color: whitesmoke;
+    color:#79242f;
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color:whitesmoke;
+	font-family: 'Arial';
+}
+.contact{
+	width: 480px;
+	overflow: hidden;
+	margin: auto;
+	margin: 20 0 0 450px;
+	padding: 80px;
+	/*El color es Pantone 188c*/
+	background: #79242f;
+	border-radius: 15px ;
+}
+
+h1{
+	text-align: center;
+	color: #79242f;
+	padding: 20px;
+}
+
+label{
+	color: white;
+	font-size: 17px;
+}
+
+#Name{
+	width: 300px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+#Email{
+	width: 300px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+#Subject{
+	width: 300px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+#Message{
+	width: 300px;
+	height: 100px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+#submit{
+	width: 300px;
+	height: 30px;
+	border: none;
+	border-radius: 17px;
+	padding-left: 7px;
+	color: #79242f;
+}
+
+.contact input[type="checkbox"] {
+	color: whitesmoke;}
+
+
+.vehicle-form {
+	max-width: 600px;
+	margin: 50px auto;
+	padding: 30px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	background-color: #79242f;
+}
+
+.vehicle-form h2 {
+	color: #79242f
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.vehicle-form label {
+	font-weight: bold;
+}
+
+.vehicle-form .form-group {
+	margin-bottom: 15px;
+}
+
+.vehicle-form button {
+	background-color: #001f3f; /* Navy */
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 100%;
+}
+
+.vehicle-form button:disabled {
+	background-color: #d3d3d3; /* Gris claro */
+	color: #a9a9a9; /* Gris oscuro */
+	cursor: not-allowed;
+	}

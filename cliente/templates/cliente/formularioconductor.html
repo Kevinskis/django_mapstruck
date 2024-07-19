@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Nuevo Conductor</title>
+</head>
+<body>
+    <h1>Crear Nuevo Conductor</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'conductores-list' %}">Volver al Listado de Conductores</a>
+</body>
+</html>

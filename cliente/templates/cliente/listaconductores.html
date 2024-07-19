@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Conductores</title>
+</head>
+<body>
+    <h1>Listado de Conductores</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Licencia</th>
+                <th>Teléfono</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for conductor in conductores %}
+            <tr>
+                <td>{{ conductor.id_conductor }}</td>
+                <td>{{ conductor.nombre }}</td>
+                <td>{{ conductor.licencia }}</td>
+                <td>{{ conductor.telefono }}</td>
+                <td>
+                    <a href="{% url 'conductores-update' conductor.id_conductor %}">Editar</a>
+                    <a href="{% url 'conductores-delete' conductor.id_conductor %}">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'conductores-create' %}">Agregar Nuevo Conductor</a>
+</body>
+</html>

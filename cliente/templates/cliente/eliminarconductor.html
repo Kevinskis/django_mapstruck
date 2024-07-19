@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmar Eliminación de Conductor</title>
+</head>
+<body>
+    <h1>Confirmar Eliminación de Conductor</h1>
+    <p>¿Estás seguro de que deseas eliminar al conductor "{{ conductor.nombre }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Eliminar</button>
+    </form>
+    <a href="{% url 'conductores-list' %}">Cancelar</a>
+</body>
+</html>
